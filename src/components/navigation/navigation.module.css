@@ -1,0 +1,88 @@
+.nav {
+    width: 100vw;
+    background-color: var(--color-white);
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    
+}
+
+.navBar {
+    width: 100%;
+    height: 100%;
+    padding: 20px 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-white);
+    position: relative;
+    z-index: 100;
+    filter: drop-shadow(0 3px 6px var(--color-shadow));
+}
+
+.logo {
+    height: 40px;
+    display: inline-block;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+}
+
+.link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.actions {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 15px;
+}
+.bag {
+    color: var(--color-light-gray);
+    font-size: 35px;
+}
+
+.bars {
+    color: var(--color-pink);
+    font-size: 40px;
+}
+.bars:hover {
+    cursor: pointer;
+}
+
+.dropdown {
+    background-color: var(--color-shadow);
+    transition: all 0.5s ease;
+    position: absolute;
+    top: -220px;
+    width: 100%;
+    padding-bottom: 20px;
+    border-radius: 0 0 25px 25px;
+    z-index: 99;
+}
+.dropdown.open {
+    top: 80px;
+}
+.menuLink {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: var(--font-md);
+    font-weight: 800;
+}
+.dropdownMenu {
+    padding: 15px;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--color-white);
+}
+.dropdownMenu:hover {
+    background-color: red;
+}

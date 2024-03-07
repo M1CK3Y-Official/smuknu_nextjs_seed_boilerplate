@@ -1,7 +1,7 @@
-import { Oswald } from 'next/font/google'
+import { Quicksand } from 'next/font/google'
 
-export const oswaldFont = Oswald({
-    weight: ['400'],
+export const quicksandFont = Quicksand({
+    weight: ['300', '400', '500', '600', '700'],
     style: ['normal'],
     subsets: ['latin'],
     display: 'swap',

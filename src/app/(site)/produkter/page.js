@@ -5,7 +5,25 @@ import styles from './page.module.css'
 export default function Page() {
 
   const headerConfig = {
-    image: '/headers/products.jpg'
+
+    header: {
+      top: {
+        text: 'Skønne',
+        color: '#fff'
+      },
+      bottom: {
+        text: 'Produkter',
+        color: '#fff'
+      }
+    },
+
+    image: '/headers/products.jpg',
+
+    body: {
+      text: `<p>Herunder finder du alle vores produkter</p>`,
+      color: '#fff'
+    },
+    bodyBackground: 'var(--color-shadow)',
   }
 
   return (

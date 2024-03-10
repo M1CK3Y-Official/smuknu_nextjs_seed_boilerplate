@@ -1,0 +1,33 @@
+.form {
+    display: grid;
+    gap: 20px;
+}
+
+.form input, .form textarea{
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--color-black);
+    width: 100%;
+    outline: none;
+    color: black;
+    background-color: transparent;
+}
+.form textarea {
+    height: 220px;
+}
+
+.btn {
+    background-color: var(--color-pink);
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: 500;
+    padding: 10px 40px;
+    font-size: 16px;
+    border-radius: 25px;
+    width: 135px;
+}
+
+.form label {
+    font-size: 20px;
+}

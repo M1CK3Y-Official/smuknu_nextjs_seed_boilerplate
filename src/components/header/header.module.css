@@ -3,7 +3,6 @@
     position: relative;
     margin: 0 auto;
     
-    
 }
 .header img {
     width: 100%;
@@ -15,7 +14,8 @@
 
 .text {
 
-    padding: 45px 30px 60px 30px;
+    padding: 45px 25px 45px 25px;
+    /* padding: 25px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,16 +24,21 @@
     position: absolute;
     top: 180px;
     width: 100%;
+    gap: 25px;
 
 }
 
 .title {
     text-align: center;
-    font-size: 30px;
     text-transform: uppercase;
-    padding-bottom: 15px;
-    line-height: 63px;
+    /* padding-bottom: 15px; */
+    /* line-height: 75px; */
+    max-width: 320px;
 }
+.title h1 {
+    font-size: 54px;
+}
+
 
 .btn {
     background-color: var(--color-pink);
@@ -45,6 +50,7 @@
     outline: none;
     font-weight: 500;
     letter-spacing: 0.5px;
+    /* margin-bottom: 15px; */
 }
 
 .btnLink {
@@ -52,8 +58,21 @@
 }
 
 .body {
-    padding-bottom: 25px;
+    /* padding-bottom: 25px; */
     font-size: var(--font-md);
-    max-width: 300px;
+    max-width: 330px;
+    /* height: auto; */
+    font-weight: 400;
     overflow-wrap: break-word;
+}
+
+
+
+@media screen and (min-width: 728px) {
+    .text {
+        max-width: calc(100% - 60px);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
 }

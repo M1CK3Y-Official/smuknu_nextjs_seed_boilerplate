@@ -48,6 +48,12 @@ a {
   text-decoration: underline;
 }
 
+.page {
+  padding: 45px 30px 60px 30px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 
 
 @media (prefers-color-scheme: dark) {

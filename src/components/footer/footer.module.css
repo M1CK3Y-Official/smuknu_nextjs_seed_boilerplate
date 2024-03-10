@@ -1,0 +1,31 @@
+.footer {
+    background-color: var(--color-light-gray);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.socials {
+    display: flex;
+    gap: 30px;
+    color: var(--color-white);
+    font-size: 2.5rem;
+}
+
+.contacts {
+    font-size: var(--font-size-sm);
+}
+
+@media screen and (min-width: 728px) {
+
+    .socials {
+        font-size: 5rem;
+    }
+    .icon:hover {
+        color: var(--color-pink);
+    }
+
+}

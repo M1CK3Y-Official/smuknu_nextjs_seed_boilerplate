@@ -20,7 +20,7 @@ export default function Home() {
     image: '/headers/front.jpg',
 
     body: {
-      text: `<p>Alt hvad du behøver... SMUK NU</p>`,
+      text: `<p>Alt hvad du behøver... <br/>SMUK NU</p>`,
       color: '#000'
     },
     bodyBackground: 'var(--color-light-pink)',
@@ -28,14 +28,18 @@ export default function Home() {
     button: {
       path: '#products',
       text: 'Se udvalgte produkter'
-    }
+    },
+
+
   }
   
 
-  return (
-    <main className={styles.page} >
+  return ( <div>
       <Header config={headerConfig} />
-    </main>
+      <div className={'page'}>
+        
+      </div>
+  </div>
   )
 }
 

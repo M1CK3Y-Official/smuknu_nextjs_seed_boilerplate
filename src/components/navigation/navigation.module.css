@@ -84,5 +84,5 @@
     color: var(--color-white);
 }
 .dropdownMenu:hover {
-    background-color: red;
+    background-color: var(--color-pink);
 }

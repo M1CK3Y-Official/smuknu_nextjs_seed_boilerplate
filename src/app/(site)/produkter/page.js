@@ -1,6 +1,8 @@
 "use client"
 import Header from '@/components/header/header'
 import styles from './page.module.css'
+import Medlem from '@/components/medlem/medlem'
+import Products from '@/components/products/products'
 
 export default function Page() {
 
@@ -26,10 +28,14 @@ export default function Page() {
     bodyBackground: 'var(--color-shadow)',
   }
 
-  return (
-    <main className={styles.page} >
+  return ( <div>
       <Header config={headerConfig} />
-    </main>
+      <div className={'page'}>
+      <h1 className={'heading'}>ALT ER SKØNHED</h1>
+        <Products recommended={false} />
+      </div>
+      <Medlem />
+  </div>
   )
 }
 

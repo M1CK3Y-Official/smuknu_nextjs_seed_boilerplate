@@ -1,6 +1,9 @@
 "use client"
 import Header from '@/components/header/header'
 import styles from './page.module.css'
+import Medlem from '@/components/medlem/medlem'
+import Products from '@/components/products/products'
+import Reviews from '@/components/reviews/reviews'
 
 export default function Home() {
 
@@ -37,8 +40,11 @@ export default function Home() {
   return ( <div>
       <Header config={headerConfig} />
       <div className={'page'}>
-        
+        <h1 className={'heading'}>Udvalgt Skønhed</h1>
+        <Products recommended={true}></Products>
+        <Reviews />
       </div>
+      <Medlem />
   </div>
   )
 }

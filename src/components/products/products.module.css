@@ -1,0 +1,18 @@
+.list {
+    display: grid;
+    gap: 60px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+@media screen and (min-width: 728px) {
+
+    .list {
+        grid-template-columns: repeat(2, 320px);
+        /* margin: 0 auto; */
+        /* align-items: center; */
+        justify-content: center;
+        gap: 30px;
+    }
+
+}

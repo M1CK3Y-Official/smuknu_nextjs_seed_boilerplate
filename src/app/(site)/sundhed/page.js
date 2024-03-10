@@ -2,6 +2,7 @@
 import Header from '@/components/header/header'
 import styles from './page.module.css'
 import Accordions from '@/components/accordions/accordions/'
+import Medlem from '@/components/medlem/medlem'
 
 export default function Page() {
 
@@ -33,6 +34,7 @@ export default function Page() {
         <div className={'page'} >
           <Accordions />
         </div>
+        <Medlem />
     </div>
   )
 }

@@ -1,7 +1,7 @@
 "use client"
 import Header from '@/components/header/header'
 import styles from './page.module.css'
-import ContactForm from '@/components/contactform/contactform'
+import ContactForm from '@/components/contactform/contactform';
 
 export default function Page() {
 
@@ -30,9 +30,7 @@ export default function Page() {
 
   return ( <div>
       <Header config={headerConfig} />
-      <div className={'page'}>
         <ContactForm />
-      </div>
   </div>
   )
 }

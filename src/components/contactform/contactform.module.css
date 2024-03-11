@@ -1,6 +1,9 @@
 .form {
     display: grid;
     gap: 20px;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 45px 30px 60px 30px;
 }
 
 .form input, .form textarea{
@@ -16,7 +19,7 @@
     height: 220px;
 }
 
-.btn {
+.submitBtn {
     background-color: var(--color-pink);
     outline: none;
     border: none;
@@ -31,3 +34,70 @@
 .form label {
     font-size: 20px;
 }
+
+.container {
+    background-color: var(--color-light-pink);
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: none;
+}
+.container * {
+    margin: 0 auto;
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: var(--font-heading);
+    /* margin-bottom: 10px; */
+}
+
+.name {
+    color: var(--color-pink);
+    font-size: var(--font-md);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.thank {
+    max-width: 260px;
+    margin-bottom: 30px;
+    font-size: var(--font-md);
+}
+
+.image {
+    border: 5px solid var(--color-pink);
+    border-radius: 100rem;
+    margin-bottom: 40px;
+}
+
+.gift {
+    max-width: 250px;
+    font-size: var(--font-md);
+    margin-bottom: 40px;
+}
+
+.btn {
+    background-color: var(--color-pink);
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: 600;
+    height: 60px;
+    padding: 10px 40px;
+    font-size: var(--font-md);
+    border-radius: 50rem;
+    width: 100%;
+    max-width: 320px;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 728px) {
+    .btn {
+        display: none;
+    }
+}
+

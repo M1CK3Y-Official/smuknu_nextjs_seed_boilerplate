@@ -49,7 +49,7 @@ const Navigation = () => {
 
                     <div onClick={ () => setIsCartOpen(!isCartOpen)}>
                         <div className={styles.cartContainer}>
-                            <FaShoppingBag className={styles.cart} />
+                            <FaShoppingBag className={styles.cart} style={{color : basket.length === 0 ? 'var(--color-light-gray)' : 'var(--color-pink)'}} />
 
                             <div className={styles.amountContainer}>
                                 <p className={styles.cartAmount}>{basket.length}</p>
@@ -66,7 +66,7 @@ const Navigation = () => {
                 })}
             </div>
 
-            <div className={`${styles.cartDropdown} ${isCartOpen ? styles.open : ''}`}>
+            <div className={`${styles.cartDropdown} ${isCartOpen ? styles.open : ''}`} style={{minHeight : basket.length === 0 ? '0' : '50vh'}}>
 
                 <Basket className={styles.basket} />
 

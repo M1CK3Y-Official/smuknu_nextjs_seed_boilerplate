@@ -43,11 +43,52 @@
     flex-direction: row-reverse;
     gap: 15px;
 }
-.bag {
+.cart {
     color: var(--color-light-gray);
     font-size: 35px;
 }
+.cartAmount {
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+.amountContainer {
+    position: absolute;
+    background-color: var(--color-pink);
+    aspect-ratio: 1/1;
+    width: 20px;
+    border-radius: 100rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -7.5px;
+    right: 0;
+}
+.cartContainer {
+    position: relative;
+}
 
+.cartDropdown {
+    position: relative;
+    gap: 0.5em;
+    top: -50vh;
+    z-index: 99;
+    width: 100vw;
+    max-height: 146px;
+    min-height: 50vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: var(--color-white);
+    transition: top 0.35s ease;
+    text-align: center;
+    color: black;
+}
+.cartDropdown::-webkit-scrollbar {
+    display: none;
+}
+.cartDropdown.open {
+    top: 0px;
+    z-index: 2;
+}
 .bars {
     color: var(--color-pink);
     font-size: 40px;
@@ -86,3 +127,4 @@
 .dropdownMenu:hover {
     background-color: var(--color-pink);
 }
+

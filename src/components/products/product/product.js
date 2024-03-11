@@ -1,6 +1,7 @@
 'use client'
 import styles from './product.module.css'
 import Image from "next/image";
+import { useBasket } from '@/context/basket';
 
 export const DiscountBox = ({percent}) => {
 
@@ -9,6 +10,8 @@ export const DiscountBox = ({percent}) => {
 }
 
 const Product = ({ product }) => {
+
+    const {basket, addToBasket} = useBasket();
 
     return (
         <div className={styles.productCard} >

@@ -1,0 +1,93 @@
+.container {
+    display: grid;
+    /* gap: 1em; */
+    
+}
+
+.imageContainer {
+    /* padding: 5px; */
+    border-radius: 15px;
+    aspect-ratio: 1/1;
+    /* width: 95px; */
+    height: 90px;
+    
+}
+.imageContainer img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    aspect-ratio: 1/1;
+    border-radius: 15px;
+}
+.itemContainer {
+    display: flex;
+    text-align: left;
+    gap: 30px;
+    height: 150px;
+    padding: 30px;
+    border-bottom: 1px solid var(--color-pink);
+}
+
+
+.itemInfo {
+    height: 100%;
+    display: grid;
+    width: 100%;
+    grid-template-areas: "title title" "amount ." ". price";
+}
+
+.title {
+    min-width: 200px;
+    max-width: 75%;
+    grid-area: title;
+}
+
+.price {
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    font-weight: 700;
+    font-size: 1.15rem;
+    grid-area: price;
+}
+.amount {
+    grid-area: amount;
+}
+
+.totalPrice {
+    display: flex;
+    padding: 15px 30px;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.totalPrice p {
+    font-size: 1.25rem;
+}
+
+.totalPriceContainer {
+    border-top: 2px solid var(--color-pink);
+    position: sticky;
+    z-index: 100;
+    bottom: 0;
+    width: 100%;
+}
+
+
+@media screen and (min-width: 728px) {
+    .itemInfo {
+        width: 100%;
+        grid-template-areas: "title title" "amount ." ". price";
+    }
+
+    .title {
+        width: 100%;
+        grid-area: title;
+    }
+    .amount {
+        grid-area: amount;
+    }
+    .price {
+        grid-area: price;
+    }
+}

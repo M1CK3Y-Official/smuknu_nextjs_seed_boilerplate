@@ -1,20 +1,35 @@
 'use client';
-import { useRef } from 'react';
-import styles from './contactform.module.css';
+import styles from './subscribeForm.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
-const ContactForm = () => {
 
-    const messageRef = useRef(null);
+const SubscribeForm = ({setFormSubmitted, setSubscriberName}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('form submitted');
-        e.target.style.display = 'none';
 
-        messageRef.current.style.display = 'block';
-    }
+        let dataToSend = {
+            name: e.target.name.value,
+            email: e.target.email.value,
+            message: e.target.message.value,
+        }
+
+        fetch(`/api/subscriber`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dataToSend),
+        }).then(res => res.json()).then(data => {
+            console.log(data);
+            setSubscriberName(data.name);
+            setFormSubmitted(true);
+        
+        });
+
+    };
 
     return ( <div>
             <form className={styles.form} id='form' onSubmit={handleSubmit}>
@@ -36,14 +51,6 @@ const ContactForm = () => {
                 <button className={styles.submitBtn}  type="submit">Opret</button>
             </form>
 
-            <div className={styles.container} ref={messageRef}>
-                <h1 className={styles.title}>Tak!</h1>
-                <p className={styles.name}>Birthe Marie Hansen</p>
-                <p className={styles.thank}>Vi er enormt glade for at få dig som medlem.</p>
-                <Image className={styles.image} src="/products/product_8281992819.jpg" alt="product" width={200} height={200} />
-                <p className={styles.gift}>Kig i din indbox vi har sendt en lille velkomst gave.</p>
-                <Link href={'/'}><button className={styles.btn}>Til Forsiden</button></Link>
-            </div>
 
 
         </div>
@@ -51,4 +58,4 @@ const ContactForm = () => {
 
 }
 
-export default ContactForm;
+export default SubscribeForm;
